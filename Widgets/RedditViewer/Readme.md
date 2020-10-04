@@ -3,5 +3,5 @@
 # Version:
 # Description:
 # Screenshot:
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Medium Widget](https://github.com/0507spc/ScriptStore/main/Widgets/RedditViewer/medium.jpg?raw=true)
 # View Code:
