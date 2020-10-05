@@ -4,7 +4,7 @@
 let inputStr = args.widgetParameter
 // if exclude itrms, this meeds to be higger than vLimit
 // logError(inputStr)
-if ( inputStr == null ) { inputStr = "apollo@gtaglitches@1@pic@4" }
+if ( inputStr == null ) { inputStr = "apollo@scriptable@1@pic@4" }
 let vRedditLimit = 15
 let vItemCount = 1
 var res = inputStr.split("@")
