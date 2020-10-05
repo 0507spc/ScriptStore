@@ -1,7 +1,12 @@
-# Author:
+# Author: 
+- cranie
 # Link:
+- https://gist.github.com/0507spc/cb762e62e5a2564ac009cc502b1d1787
 # Version:
+- 2.0
 # Description:
+- Shows a subreddit, clickable links to either the post or the user of the post. option to alter the number of posts shown and  allows alternate reddit clients in thebparameter URL.
 # Screenshot:
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Medium Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/RedditViewer/medium.jpg?raw=true)
 # View Code:
+- https://github.com/0507spc/ScriptStore/blob/main/Widgets/RedditViewer/RedditViewer.js
