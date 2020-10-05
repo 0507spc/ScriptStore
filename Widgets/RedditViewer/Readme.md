@@ -7,6 +7,6 @@
 # Description:
 - Shows a subreddit, clickable links to either the post or the user of the post. option to alter the number of posts shown and  allows alternate reddit clients in thebparameter URL.
 # Screenshot:
-![Medium Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/RedditViewer/medium.jpg?raw=true)
+![Medium Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/RedditViewer/medium.png?raw=true)
 # View Code:
 - https://github.com/0507spc/ScriptStore/blob/main/Widgets/RedditViewer/RedditViewer.js
