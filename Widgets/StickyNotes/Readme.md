@@ -1,12 +1,16 @@
 # Author: 
 - cranie
 # Link:
-- https://gist.github.com/0507spc/cb762e62e5a2564ac009cc502b1d1787
+- https://github.com/0507spc/ScriptStore/blob/main/Widgets/StickyNotes/StickyNote.js
 # Version:
-- 2.0
+- 1.0
 # Description:
-- Shows a subreddit, clickable links to either the post or the user of the post. option to alter the number of posts shown and  allows alternate reddit clients in thebparameter URL.
+- This started as a PoC to see what could be achieved witb Scriptable. I started to use Shortcuts for the data integration, but, decided to try to do it all in Scriptable. This is that attempt.
+- This simply displays text, the widget is not "fancy". 
+- Editing of the text and style is achieved via a web view and url schemes. Interestingly, running the "edit" directly in Scriptable does NOT work, but dies from a widget.
+- Add a widget, select StickyNote, the widget param is the note name, unique names allows multiple unique widgets.
+- Click the text to open the edit note and style. Click save to write this back, thats it.
 # Screenshot:
 ![Medium Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/RedditViewer/medium.png?raw=true)
 # View Code:
-- https://github.com/0507spc/ScriptStore/blob/main/Widgets/RedditViewer/RedditViewer.js
+- https://github.com/0507spc/ScriptStore/blob/main/Widgets/StickyNotes/StickyNote.js
