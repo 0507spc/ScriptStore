@@ -11,6 +11,7 @@
 - Add a widget, select StickyNote, the widget param is the note name, unique names allows multiple unique widgets.
 - Click the text to open the edit note and style. Click save to write this back, thats it.
 # Screenshot:
-![Medium Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/RedditViewer/medium.png?raw=true)
+![Medium Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/StickyNotes/medium.jpg?raw=true)
+![Input / Config](https://github.com/0507spc/ScriptStore/blob/main/Widgets/StickyNotes/input.png?raw=true)
 # View Code:
 - https://github.com/0507spc/ScriptStore/blob/main/Widgets/StickyNotes/StickyNote.js
