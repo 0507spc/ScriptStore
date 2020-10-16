@@ -7,6 +7,6 @@
 # Description:
 - Shows a simple status of a just giving page.
 # Screenshot:
-![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/JustGiving/Small.jpg?raw=true)
+![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/JustGiving/Small.png?raw=true)
 # View Code:
 - https://github.com/0507spc/ScriptStore/blob/main/Widgets/JustGiving/JustGiving.js
