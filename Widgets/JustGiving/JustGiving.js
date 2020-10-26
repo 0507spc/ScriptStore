@@ -15,11 +15,22 @@ let img = jg.match(/og:image.*?jpg/).toString().replace(/.*https/, "https")
 
 let details   = jg.match(/jg-text--brand-large.*? supporter./).toString().replace(/.*?\">/, "")
 
+let futureDate = jg.match(/jgdonation:enddate.*/).toString().replace(/jgdonation:enddate" content="/, "").replace(/T.*/, "")
+
+const date1 = new Date();
+const date2 = new Date(futureDate)
+const diffTime = Math.abs(date2 - date1);
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+
+
 let amtRaised  = details.replace(/<.*/, "")
 let amtGoal    = details.replace(/.*?<b>/, "").replace(/<.*/, "")
 let supporters = details.replace(/.*>/, "").replace(/ .*/, "")
 
 let theImage = await getRemoteImage(img)
+
+
+
 
 let w = new ListWidget()
 
@@ -49,12 +60,18 @@ let headBal = dataRow.addText("Donations:")
 let balText = dataRow.addText(showMe)
   balText.font = mainText
   
-let showSupp = supporters + " supporters."
+let showSupp = "👤 " + supporters + " • Days left: " + diffDays
 let subText = dataRow.addText(showSupp)
   subText.font = mainText
   subText.textColor = Color.gray()
 
 w.presentSmall()
+
+
+
+
+
+
 
 // ---------  FUNCTIONS only here ------------
 
