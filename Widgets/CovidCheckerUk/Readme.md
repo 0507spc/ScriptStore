@@ -1,14 +1,14 @@
 # Author: 
 - cranie
 # Link:
-- https://github.com/0507spc/ScriptStore/blob/main/Widgets/CovidCheckerUk/JustGiving.js
+- https://github.com/0507spc/ScriptStore/blob/main/Widgets/CovidCheckerUk/lockDownStatus.js
 # Version:
-- 1.1
+- 1.0
 # Description:
-- Shows a simple status of a just giving page.
+- Shows a simple status of Covid details for an area by postcode. Set postcode in script or as parameter.
 # Changes:
-- Days remaining
+- none
 # Screenshot:
 ![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/CovidCheckerUk/Small.png?raw=true)
 # View Code:
-- https://github.com/0507spc/ScriptStore/blob/main/Widgets/CovidCheckerUk/JustGiving.js
+- https://github.com/0507spc/ScriptStore/blob/main/Widgets/CovidCheckerUk/lockDownStatus.js
