@@ -9,6 +9,6 @@
 # Changes:
 - none
 # Screenshot:
-![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/CovidCheckerUk/Small.png?raw=true)
+![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/CovidCheckerUk/Small.jpg?raw=true)
 # View Code:
 - https://github.com/0507spc/ScriptStore/blob/main/Widgets/CovidCheckerUk/lockDownStatus.js
