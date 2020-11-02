@@ -9,6 +9,6 @@
 # Changes:
 - Days remaining
 # Screenshot:
-![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/SMarty/Smarty.jpg?raw=true)
+![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/Smarty/Smarty.jpg?raw=true)
 # View Code:
 - https://github.com/0507spc/ScriptStore/blob/main/Widgets/Smarty/Smarty.js
