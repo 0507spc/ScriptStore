@@ -1,7 +1,7 @@
 
 
 let postcode = args.widgetParameter
-if ( postcode == null ) { postcode = "s446ey" }
+if ( postcode == null ) { postcode = "s446et" }
 // if ( postcode == null ) { postcode = "S8 9np" }
 
 postcode = postcode.toLocaleUpperCase().replace(/ /, "")
