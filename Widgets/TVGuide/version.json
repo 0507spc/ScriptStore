@@ -2,6 +2,7 @@
   "Name": "TVGuide",
   "Version": "1.2",
   "ChangeHistory": {
+      "1.3": "Click entry to display description of show.",
       "1.2": "Fixed the midnight rollover time.",
       "1.1": "Auto script update enabled.",
       "1.0": "Added logo and epg cache with housekeeping. Force cache clear too."
