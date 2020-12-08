@@ -1,6 +1,6 @@
 {
   "Name": "TVGuide",
-  "Version": "1.3",
+  "Version": "1.4",
   "ChangeHistory": {
       "1.4": "Highlighting, if possible."
       "1.3": "Click entry to display description of show.",
