@@ -37,7 +37,7 @@ let headBal = dataRow.addText(areaName + " 💉 🦠")
    dateRow.font = mainText
 let firstRow = dataRow.addText("First Dose: " + firstDose.toString())
   firstRow.font = mainText
-let secondRow = dataRow.addText("Seconds Dose: " + secondDose.toString())
+let secondRow = dataRow.addText("Second Dose: " + secondDose.toString())
   secondRow.font = mainText
 
 
