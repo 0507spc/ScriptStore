@@ -21,8 +21,8 @@ if ( params.alert == 1 ) {
   	await(a.presentAlert());
 }
 
-
-Version = 1.4
+theKey = "zrT6834Gydreeed"
+Version = 1.5
 autoUpdate = true
 checkVersion(Version)
 
@@ -34,7 +34,8 @@ forceRefresh = false
 // show = "general"
 
 // The url below is WIP 
-let vURL="https://meetmerightthere.000webhostapp.com/@yyyymmdd@/@id@"
+let vURL="https://meetmerightthere.000webhostapp.com/getShow.php?key=" + theKey + "&id=@id@&date=@yyyymmdd@"
+
 let vLogoURLGeneric = "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/320/320/skychb@id@.png"
 //let vLogoURL="https://e3.365dm.com/tvlogos/channels/@id@-Mobile-Logo.png"
 
@@ -598,3 +599,6 @@ function getTheme(themeName) {
   return themes[themeName]
 
 }
+
+
+
