@@ -9,6 +9,7 @@
 # Changes:
 - Updated for the TV source site key and no longer direct links to files.
 # Screenshot:
-![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/TVGuide/Small.png?raw=true)
+![Medium Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/TVGuide/Medium.png?raw=true)
+![Large Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/TVGuide/Large.png?raw=true)
 # View Code:
 - https://github.com/0507spc/ScriptStore/blob/main/Widgets/TVGuide/TVGuide.js
