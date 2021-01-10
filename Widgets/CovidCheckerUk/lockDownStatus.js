@@ -1,7 +1,7 @@
 
 
 let postcode = args.widgetParameter
-if ( postcode == null ) { postcode = "s446et" }
+if ( postcode == null ) { postcode = "ch635pe" }
 // if ( postcode == null ) { postcode = "S8 9np" }
 
 postcode = postcode.toLocaleUpperCase().replace(/ /, "")
@@ -29,21 +29,25 @@ async function getString(urlName, id) {
   let fReq = new Request(urlName)
   let output = await fReq.loadString()
   
-  log(output)
+  //log(output)
   
   
   matchMe   = new RegExp('/.*' + postcode + '.*/','i')
   replaceMe = new RegExp('.*?' + postcode)
   output = output.match(matchMe).join(" ")
   
-  currLoc        = output.replace(/.*?areaName=/, "").replace(/".*/, "")
+  //currLoc        = output.replace(/.*?areaName=/, "").replace(/".*/, "")
+  replaceLoc     = new RegExp('.*govuk-!-padding-left-0"> ' + postcode + " &ndash;")
+  currLoc        = output.replace(replaceLoc, "").replace(/ <\/h2>.*/, "")
+
   currAlert      = output.replace(/.*Current.*?<\/small>/, "").replace(/[ ]*<\/h3>.*/, "")
-  currRRateLoc   = output.replace(/.*healthcare region of /, "").replace(/ is estimated.*/, "")
-  currRRate      = output.replace(/.*is estimated at.*?<b>/, "").replace(/<\/b>.*/, "").replace(/&nbsp;/g, " ")
-  
-  
-  
-  
+  //currRRateLoc   = output.replace(/.*healthcare region of /, "").replace(/ is estimated.*/, "")
+  currRRateLoc   = output.replace(/.*healthcare region of /, "").replace(/ <\/h3>.*/, "")
+  //currRRate      = output.replace(/.*is estimated at.*?<b>/, "").replace(/<\/b>.*/, "").replace(/&nbsp;/g, " ")
+  currRRate      = output.replace(/.*<p class="sam-body"> /, "").replace(/with a daily infection growth rate range of.*/, "").replace(/&nbsp;/g, " ") 
+
+  //log(output)
+
 //   currNewPosDate = output.replace(/.*?tested positive on /, "").replace(/ <.*/, "")
   
   currNewPosDate = output.replace(/.*?level provided on&nbsp;<span style="white-space: nowrap">/, "").replace(/<.*/, "")
@@ -56,7 +60,7 @@ async function getString(urlName, id) {
   locationImg    = output.replace(/.*https:\/\/coronavirus.data.gov.uk\/public\/assets\/frontpage\/map_thumbnails\//, "https://coronavirus.data.gov.uk/public/assets/frontpage/map_thumbnails/").replace(/".*/, "")
   
   
-  log(locationImg)
+  //log(locationImg)
   
   localImg = await getBackground(locationImg)
   img = getLocalImage(localImg)
@@ -288,9 +292,3 @@ function getLocalImage(imageName) {
   let filePath = fm.joinPath(dir, imageName)
   return fm.readImage(filePath)
 }
-
-
-
-
-
-
