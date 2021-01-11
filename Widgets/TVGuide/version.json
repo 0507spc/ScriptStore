@@ -2,6 +2,7 @@
   "Name": "TVGuide",
   "Version": "1.5",
   "ChangeHistory": {
+      "1.6": "URL fix",
       "1.5": "updated the url for tvguide changes",
       "1.4": "Highlighting, if possible.",
       "1.3": "Click entry to display description of show.",
