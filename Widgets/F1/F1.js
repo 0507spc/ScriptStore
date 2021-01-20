@@ -1,6 +1,3 @@
-// Variables used by Scriptable.
-// These must be at the very top of the file. Do not edit.
-// icon-color: pink; icon-glyph: car;
 
 
 // 1616779400
@@ -42,7 +39,7 @@ for (var key in jg.races) {
     vSlug       = jg.races[key].slug
     vlocaleKey  = jg.races[key].localeKey
     vName       = jg.races[key].name
-    vImage      = "./F1/" + vLoc + ".png"
+    vImage      = "./tracks/" + vLoc + ".png"
     vFlag       = getFlag(vLoc)
     vTBC        = jg.races[key].tbc
     vRnd        = jg.races[key].round
@@ -253,7 +250,7 @@ function EpochToDate(epoch) {
 // get images from local filestore or download them once
 async function getImage(image, vImageURL) {
   let fm = FileManager.iCloud()
-  let dir = fm.documentsDirectory() + "/F1/"
+  let dir = fm.documentsDirectory() + "/tracks/"
   if ( fm.isDirectory(dir) == false) {
     fm.createDirectory(dir, true)
   }
@@ -492,3 +489,4 @@ context.fillText("TBC!",-width/2,height/2);
   // Convert to image and return.
   return Image.fromData(outputData)
 }
+
