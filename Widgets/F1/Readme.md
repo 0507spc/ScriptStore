@@ -10,5 +10,6 @@
 - none
 # Screenshot:
 ![Small Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/F1/Small.jpg?raw=true)
+![Small_1 Widget](https://github.com/0507spc/ScriptStore/blob/main/Widgets/F1/Small_1.jpg?raw=true)
 # View Code:
 - https://github.com/0507spc/ScriptStore/blob/main/Widgets/F1/F1.js
