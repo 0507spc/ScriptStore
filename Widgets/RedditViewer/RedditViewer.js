@@ -4,6 +4,7 @@
 let inputStr = args.widgetParameter
 // if exclude itrms, this meeds to be higger than vLimit
 // logError(inputStr)
+// mske the code show black even when not in dark mode
 if ( inputStr == null ) { inputStr = "apollo@scriptable@1@pic@4" }
 let vRedditLimit = 15
 let vItemCount = 1
@@ -19,13 +20,13 @@ let appURL = res[0] + "://" + baseURL + "/r/" + rReddit
 let cGray = Color.gray()
 let simpleEmoji    = new Font("Menlo-Regular",     10)
 let mainText       = new Font("GillSans-SemiBold", 14)
-let titleTextFont  = new Font("GillSans-SemiBold", 14)
+let titleTextFont  = new Font("GillSans-SemiBold", 14)	
 
 
 // set widget
 let w = new ListWidget()
 w.setPadding(10, 10, 10, 10)
-w.spacing = 1
+w.spacing = 1			
 
 let titleStack = w.addStack()
   titleStack.url = appURL
