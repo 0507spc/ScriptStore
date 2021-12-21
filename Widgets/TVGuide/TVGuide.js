@@ -22,7 +22,7 @@ if ( params.alert == 1 ) {
 }
 
 theKey = "zrT6834Gydreeed"
-Version = 1.6
+Version = 1.7
 autoUpdate = true
 checkVersion(Version)
 
@@ -424,9 +424,27 @@ async function getString(urlName, theID, whatDate) {
   }
   
   if ( fm.fileExists(path) == false || forceRefresh == true) {
+      
+  
+  try {
     let fReq = new Request(urlName)
     output = await fReq.loadJSON()
     fm.writeString(path, JSON.stringify(output, null, 4))
+} catch (objError) {
+    if (objError instanceof SyntaxError) {
+        console.error(objError.name);
+        log(objError.name)
+    } else {
+        console.error(objError.message);
+        log(objError.message)
+    }
+}
+  
+  
+  
+//     let fReq = new Request(urlName)
+//     output = await fReq.loadJSON()
+//     fm.writeString(path, JSON.stringify(output, null, 4))
   } else {
     output = getLocalFile(theFileName)
   }
