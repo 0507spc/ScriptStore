@@ -1,7 +1,8 @@
 {
   "Name": "TVGuide",
-  "Version": "1.5",
+  "Version": "1.7",
   "ChangeHistory": {
+      "1.7": "Added check for JSON format",
       "1.6": "URL fix",
       "1.5": "updated the url for tvguide changes",
       "1.4": "Highlighting, if possible.",
