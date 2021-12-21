@@ -22,7 +22,7 @@ if ( params.alert == 1 ) {
 }
 
 theKey = "zrT6834Gydreeed"
-Version = 1.7
+Version = 1.8
 autoUpdate = true
 checkVersion(Version)
 
@@ -39,7 +39,7 @@ let vURL="https://scriptablefun.000webhostapp.com/getShow.php?key=" + theKey + "
 let vLogoURLGeneric = "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/320/320/skychb@id@.png"
 //let vLogoURL="https://e3.365dm.com/tvlogos/channels/@id@-Mobile-Logo.png"
 
-let highlightMe      = new RegExp(/live .*Eng|live snooker|live mosconi|Live.*Eng.*ODI|Live.*F1.*GP|live.*darts|chess |poker |the simpsons|red dwarf/, "i")
+let highlightMe      = new RegExp(/live .*Eng|live snooker|live mosconi|Live.*F1.*GP|live.*darts|chess |poker |the simpsons|red dwarf/, "i")
 
 // Choose from: SkyTV, SkyMobile, TVGuide, RadioTimes, VirginTVGo
 Theme = getTheme("SkyMobile")
@@ -72,7 +72,7 @@ vStackLimit = 50
 vCornerRadius = 4
 vBorderWidth = 0.5
 // just show an example 
-rows = 3
+rows = 13
 
 switch (config.widgetFamily) {
   case "medium":
@@ -141,9 +141,9 @@ sports = [
 { "id": "1303", "name": "Sky Sports Premier League" },
 { "id": "3838", "name": "Sky Sports Football" },
 { "id": "1322", "name": "Sky Sports Golf" },
-{ "id": "1354", "name": "Sky Sports Racing" },
 { "id": "3839", "name": "Sky Sports Arena" },
 { "id": "1314", "name": "Sky Sports News" },
+{ "id": "1150", "name": "Freesports" },
 { "id": "4004", "name": "Eurosport 1 HD" },
 { "id": "4009", "name": "Eurosport 2 HD" }
 ]
@@ -303,7 +303,7 @@ if ( config.runsInWidget == true) {
 }
 // Debug:
 if ( params.alert != 1 ) {
-  widget.presentMedium()
+  widget.presentLarge()
 }
 
 // ------------------------------------------------
@@ -617,6 +617,3 @@ function getTheme(themeName) {
   return themes[themeName]
 
 }
-
-
-
