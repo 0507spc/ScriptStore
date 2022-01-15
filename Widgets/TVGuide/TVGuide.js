@@ -39,7 +39,7 @@ let vURL="https://scriptablefun.000webhostapp.com/getShow.php?key=" + theKey + "
 let vLogoURLGeneric = "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/320/320/skychb@id@.png"
 //let vLogoURL="https://e3.365dm.com/tvlogos/channels/@id@-Mobile-Logo.png"
 
-let highlightMe      = new RegExp(/live .*Eng|live snooker|live mosconi|Live.*F1.*GP|live.*darts|chess |poker |the simpsons|red dwarf/, "i")
+let highlightMe      = new RegExp(/live .* Eng|live snooker|live mosconi|Live.*F1.*GP|live.*darts|chess |poker |the simpsons|red dwarf/, "i")
 
 // Choose from: SkyTV, SkyMobile, TVGuide, RadioTimes, VirginTVGo
 Theme = getTheme("SkyMobile")
