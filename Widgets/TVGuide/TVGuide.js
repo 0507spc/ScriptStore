@@ -22,7 +22,7 @@ if ( params.alert == 1 ) {
 }
 
 theKey = "zrT6834Gydreeed"
-Version = 1.8
+Version = 1.9
 autoUpdate = true
 checkVersion(Version)
 
