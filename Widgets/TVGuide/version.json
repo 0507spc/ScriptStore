@@ -1,16 +1,18 @@
 {
   "Name": "TVGuide",
-  "Version": "1.9",
+  "Version": "1.11",
   "ChangeHistory": {
-      "1.9": "Space before Eng",
-      "1.8": "Freesports and highlighting fix",
-      "1.7": "Added check for JSON format",
-      "1.6": "URL fix",
-      "1.5": "updated the url for tvguide changes",
-      "1.4": "Highlighting, if possible.",
-      "1.3": "Click entry to display description of show.",
-      "1.2": "Fixed the midnight rollover time.",
-      "1.1": "Auto script update enabled.",
-      "1.0": "Added logo and epg cache with housekeeping. Force cache clear too."
+      "1.11": "Add BT Sport to listings",
+      "1.10": "Support 15 rows in large",
+      "1.9":  "Space before Eng",
+      "1.8":  "Freesports and highlighting fix",
+      "1.7":  "Added check for JSON format",
+      "1.6":  "URL fix",
+      "1.5":  "updated the url for tvguide changes",
+      "1.4":  "Highlighting, if possible.",
+      "1.3":  "Click entry to display description of show.",
+      "1.2":  "Fixed the midnight rollover time.",
+      "1.1":  "Auto script update enabled.",
+      "1.0":  "Added logo and epg cache with housekeeping. Force cache clear too."
    }
 }
