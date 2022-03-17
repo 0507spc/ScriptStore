@@ -22,7 +22,7 @@ if ( params.alert == 1 ) {
 }
 
 theKey = "zrT6834Gydreeed"
-Version = 1.9
+Version = 1.11
 autoUpdate = true
 checkVersion(Version)
 
@@ -47,8 +47,8 @@ Theme = getTheme("SkyMobile")
 // hight a multiple of 26 max 26*13 = 338
 // length is 2 * 153 = 306
 // font sizes should increase too
-vBaseCellLength = 153
-vBaseCellHeight = 26
+vBaseCellLength = 150
+vBaseCellHeight = 24
 
 
 // calculate the sizes here
@@ -72,14 +72,14 @@ vStackLimit = 50
 vCornerRadius = 4
 vBorderWidth = 0.5
 // just show an example 
-rows = 13
+rows = 15
 
 switch (config.widgetFamily) {
   case "medium":
     rows = 5
     break;
   case "large":
-    rows = 13
+    rows = rows
     break;
 }
 
@@ -145,7 +145,9 @@ sports = [
 { "id": "1314", "name": "Sky Sports News" },
 { "id": "1150", "name": "Freesports" },
 { "id": "4004", "name": "Eurosport 1 HD" },
-{ "id": "4009", "name": "Eurosport 2 HD" }
+{ "id": "4009", "name": "Eurosport 2 HD" },
+{ "id": "3661", "name": "BT Sport 1" },
+{ "id": "3663", "name": "BT Sport 2" }
 ]
 
 // sports = [
@@ -176,7 +178,7 @@ let title = titleStack.addText(" - Sky TV Guide - @" + updateTime)
   title.font = Font.boldSystemFont(10)
   title.textColor = vTitleTextColor
 
-widget.addSpacer(10)
+widget.addSpacer(7)
 vShowCount = 1
 for (var key in showsToShow) {
   earlyEnd = 0
