@@ -1,7 +1,8 @@
 {
   "Name": "TVGuide",
-  "Version": "1.11",
+  "Version": "1.12",
   "ChangeHistory": {
+      "1.12": "Host change due to free service deletion.",
       "1.11": "Add BT Sport to listings",
       "1.10": "Support 15 rows in large",
       "1.9":  "Space before Eng",
