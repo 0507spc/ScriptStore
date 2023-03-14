@@ -78,60 +78,72 @@ async function getDriverAbbreviation(familyName) {
   return '';
 }
 
-async function getPNG(trackSVG) {
+async function getPNG(trackSVG, trackName) {
+  const cacheDir = FileManager.local().cacheDirectory();
+  const cacheFile = cacheDir + `${trackName}.png`;
+
+  // Check if the file exists in the cache and return it if it does
+  if (FileManager.local().fileExists(cacheFile)) {
+    const cachedData = FileManager.local().read(cacheFile);
+    return Image.fromData(cachedData);
+  }
+
   let js = `
-  // Get the SVG element
-const svg = document.getElementById("my-svg");;
-// Set the stroke color of the SVG to white
-svg.setAttribute("stroke", "#ffffff");
+    // Get the SVG element
+    const svg = document.getElementById("my-svg");
+    // Set the stroke color of the SVG to white
+    svg.setAttribute("stroke", "#ffffff");
 
-// Create a new canvas
-const canvas = document.createElement("canvas");
-canvas.width = svg.width.baseVal.value;
-canvas.height = svg.height.baseVal.value;
+    // Create a new canvas
+    const canvas = document.createElement("canvas");
+    canvas.width = svg.width.baseVal.value;
+    canvas.height = svg.height.baseVal.value;
 
-// Get the canvas context and draw the SVG on it
-const ctx = canvas.getContext("2d");
-const img = new Image();
-img.onload = () => {
-  ctx.drawImage(img, 0, 0);
-  
-  // Convert the canvas to a data URL and create an image
-  const dataUrl = canvas.toDataURL("image/png");
-  const imgEl = document.createElement("img");
-  imgEl.src = dataUrl;
-  document.body.appendChild(imgEl);
-};
-img.src = "data:image/svg+xml;base64," + btoa(new XMLSerializer().serializeToString(svg));
-  `
-  html = `<!DOCTYPE html>
-<html>
-  <head>
-    <title>SVG to PNG Converter</title>
-  </head>
-  <body>
-  <svg id="my-svg" width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="siz32 " viewBox="0 0 150 90">
-      ${trackSVG}
-      </svg>
-    <script>
-      // Add your JavaScript code here
-    </script>
-  </body>
-</html>`
-  
+    // Get the canvas context and draw the SVG on it
+    const ctx = canvas.getContext("2d");
+    const img = new Image();
+    img.onload = () => {
+      ctx.drawImage(img, 0, 0);
+
+      // Convert the canvas to a data URL and create an image
+      const dataUrl = canvas.toDataURL("image/png");
+      const imgEl = document.createElement("img");
+      imgEl.src = dataUrl;
+      document.body.appendChild(imgEl);
+    };
+    img.src = "data:image/svg+xml;base64," + btoa(new XMLSerializer().serializeToString(svg));
+  `;
+
+  const html = `<!DOCTYPE html>
+    <html>
+      <head>
+        <title>SVG to PNG Converter</title>
+      </head>
+      <body>
+        <svg id="my-svg" width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="siz32 " viewBox="0 0 150 90">
+          ${trackSVG}
+        </svg>
+        <script>
+          // Add your JavaScript code here
+        </script>
+      </body>
+    </html>`;
+
   // Make the web view and get its return value.
-  let view = new WebView()
-  await view.loadHTML(html)
-  let returnValue = await view.evaluateJavaScript(js)
-  let out = await view.getHTML()
-  
+  const view = new WebView();
+  await view.loadHTML(html);
+  const returnValue = await view.evaluateJavaScript(js);
+  const out = await view.getHTML();
+
   // Remove the data type from the string and convert to data
-//   let outputDataString = returnValue.slice(returnValue.indexOf(",")+1)
-    outputDataString = out.split("png;base64,")[1].replace(/"><\/body><\/html>/,'')
-    outputData = Data.fromBase64String(outputDataString)
-  // Convert to image and return.// 
-// console.log(returnValue)
-  return Image.fromData(outputData)
+  const outputDataString = out.split("png;base64,")[1].replace(/"><\/body><\/html>/,'');
+  const outputData = Data.fromBase64String(outputDataString);
+
+  // Save the image to the cache
+  FileManager.local().write(cacheFile, outputData);
+
+  // Convert to image and return.
+  return Image.fromData(outputData);
 }
 
 
@@ -143,7 +155,7 @@ const raceName = f1Data.MRData.RaceTable.Races[0].raceName;
 const subRaceName = f1TrackEmojis[raceName];
 
 // Define the SVG string to be converted to PNG
-const trackPNG = await getPNG(f1Tracks[raceName])
+const trackPNG = await getPNG(f1Tracks[raceName], raceName)
 
 
 
