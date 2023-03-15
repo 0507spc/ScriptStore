@@ -177,12 +177,23 @@ const driverStandings = standingsData.MRData.StandingsTable.StandingsLists[0].Dr
 let widget = new ListWidget();
 widget.backgroundColor = new Color("#1A1A1A");
 
+let headerSize = 22
+let footerSize = 10
+
+// Add empty text element for padding
+let headerPaddingStack = widget.addStack();
+let padderHeader = headerPaddingStack.addText(" ")
+padderHeader.font = Font.boldSystemFont(headerSize);
+
 // Header with race name
 let headerStack = widget.addStack();
 headerStack.layoutHorizontally();
+
+headerStack.layoutHorizontally();
+
 headerStack.addSpacer()
 let raceNameText = headerStack.addText(raceName + " • " + subRaceName);
-raceNameText.font = Font.boldSystemFont(18);
+raceNameText.font = Font.boldSystemFont(16);
 raceNameText.textColor = Color.white();
 raceNameText.centerAlignText();
 headerStack.addSpacer()
@@ -231,24 +242,27 @@ for (let driver of driverStandings) {
   let driverNameText = driverStackRow.addText(await getDriverAbbreviation(driver.Driver.familyName));
   driverNameText.font = Font.systemFont(14);
   driverNameText.textColor = Color.white();
-  driverNameText.minimumScaleFactor = 0.5;
+//   driverNameText.minimumScaleFactor = 0.5;
   driverNameText.lineLimit = 1;
   driverStackRow.addSpacer();
   let driverTeamText = driverStackRow.addText(driver.Constructors[0].name);
   driverTeamText.font = Font.systemFont(14);
   driverTeamText.textColor = new Color(teamColors[driver.Constructors[0].name]);
-  driverTeamText.minimumScaleFactor = 0.5;
+//   driverTeamText.minimumScaleFactor = 0.5;
   driverTeamText.lineLimit = 1;
   driverStackRow.addSpacer();
   let driverPoints = driverStackRow.addText(driver.points);
   driverPoints.font = Font.systemFont(14);
   driverPoints.textColor = Color.white();
-  driverPoints.minimumScaleFactor = 0.5;
+//   driverPoints.minimumScaleFactor = 0.5;
   driverPoints.lineLimit = 1;
   
 }
 
-
+// Add empty text element for padding
+let footerPaddingStack = widget.addStack();
+let padderFooter = footerPaddingStack.addText(" ")
+padderFooter.font = Font.boldSystemFont(footerSize);
 
 
 
