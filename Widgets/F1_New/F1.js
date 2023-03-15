@@ -170,7 +170,8 @@ const daysToGo = Math.ceil((raceDate.getTime() - Date.now()) / (1000 * 3600 * 24
 const standingsData = await new Request('https://ergast.com/api/f1/current/driverStandings.json').loadJSON();
 
 // top 5
-const driverStandings = standingsData.MRData.StandingsTable.StandingsLists[0].DriverStandings.slice(0, 5);
+let topCount = 5
+const driverStandings = standingsData.MRData.StandingsTable.StandingsLists[0].DriverStandings.slice(0, topCount);
 
 // Create widget
 let widget = new ListWidget();
@@ -194,20 +195,23 @@ mainStack.layoutHorizontally();
 let raceInfoStack = mainStack.addStack();
 raceInfoStack.layoutVertically();
 
-raceInfoStack.addSpacer();
-let raceDateTimeText = raceInfoStack.addText("Next Race Date:")
-raceDateTimeText = raceInfoStack.addText(raceDate.toLocaleDateString() + " " + raceDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
-raceDateTimeText.font = Font.systemFont(12);
+let subFontSize = 10
+raceInfoStack.addSpacer(20);
+let raceDateTimeTextHdr = raceInfoStack.addText("Next Race Date:")
+raceDateTimeTextHdr.font = Font.systemFont(subFontSize);
+raceDateTimeTextHdr.textColor = Color.white();
+let raceDateTimeText = raceInfoStack.addText(raceDate.toLocaleDateString() + " " + raceDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
+raceDateTimeText.font = Font.systemFont(subFontSize);
 raceDateTimeText.textColor = Color.white();
 let daysToGoText = raceInfoStack.addText(daysToGo.toString() + " days to go");
-daysToGoText.font = Font.systemFont(12);
+daysToGoText.font = Font.systemFont(subFontSize);
 daysToGoText.textColor = Color.white();// 
 // raceInfoStack.addSpacer();
 
 raceImageStack = raceInfoStack.addStack()
 raceImageStack.layoutVertically()
 let trackImage = raceImageStack.addImage(trackPNG)
-trackImage.imageSize = new Size(70, 70)
+trackImage.imageSize = new Size(90, 90)
 trackImage.rightAlignImage()
 
 
