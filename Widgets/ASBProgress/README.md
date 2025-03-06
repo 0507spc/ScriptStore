@@ -11,6 +11,10 @@ This script creates a widget for the [Scriptable](https://scriptable.app/) app t
 - **Clickable Items**: Tap on an item to open it in the Audiobookshelf app.
 - **Progress Tracking**: Displays the progress percentage for each item.
 
+## Preview
+
+![alt text](https://github.com/0507spc/ScriptStore/blob/82360b1e7ffcf07b0315066fd17e68dcee9b4ceb/Widgets/ASBProgress/example.jpeg?raw=true)
+
 ## Installation
 
 ### Prerequisites
