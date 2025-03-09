@@ -68,7 +68,7 @@ async function fetchCoverImage(itemId, width = 75, height = 75) { // Smaller squ
     }
 
     // Fetch the cover image from the API
-    const url = `${API_BASE_URL}/items/${itemId}/cover?width=${width}&height=${height}`;
+    const url = `${API_BASE_URL}/items/${itemId}/cover?width=${width}&height=${height}&raw=1`;
     const request = new Request(url);
     request.headers = { "Authorization": `Bearer ${API_TOKEN}` };
 
