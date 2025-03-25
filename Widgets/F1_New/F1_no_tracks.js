@@ -42,7 +42,7 @@ const f1TrackEmojis = {
 
 
 async function getDriverAbbreviation(familyName) {
-  const request = new Request(`http://ergast.com/api/f1/2023/drivers.json`);
+  const request = new Request(`https://api.jolpi.ca/ergast/f1/2023/drivers.json`);
   const response = await request.loadJSON();
   const drivers = response.MRData.DriverTable.Drivers;
   for (let driver of drivers) {
@@ -55,7 +55,7 @@ async function getDriverAbbreviation(familyName) {
 
 
 // Fetch F1 data from API
-const f1Data = await new Request('https://ergast.com/api/f1/current/next.json').loadJSON();
+const f1Data = await new Request('https://api.jolpi.ca/ergast/f1/current/next.json').loadJSON();
 
 // Get the name of the next race
 const raceName = f1Data.MRData.RaceTable.Races[0].raceName;
@@ -68,7 +68,7 @@ const raceDate = new Date(raceDateTime);
 const daysToGo = Math.ceil((raceDate.getTime() - Date.now()) / (1000 * 3600 * 24));
 
 // Get the driver standings
-const standingsData = await new Request('https://ergast.com/api/f1/current/driverStandings.json').loadJSON();
+const standingsData = await new Request('https://api.jolpi.ca/ergast/f1/current/driverStandings.json').loadJSON();
 
 // top 5
 const driverStandings = standingsData.MRData.StandingsTable.StandingsLists[0].DriverStandings.slice(0, 5);
