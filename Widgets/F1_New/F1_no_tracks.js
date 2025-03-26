@@ -42,7 +42,7 @@ const f1TrackEmojis = {
 
 
 async function getDriverAbbreviation(familyName) {
-  const request = new Request(`https://api.jolpi.ca/ergast/f1/2023/drivers.json`);
+  const request = new Request(`https://api.jolpi.ca/ergast/f1/2025/drivers.json`);
   const response = await request.loadJSON();
   const drivers = response.MRData.DriverTable.Drivers;
   for (let driver of drivers) {
